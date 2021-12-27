@@ -1,0 +1,93 @@
+:root {
+  --dark: hsl(0, 0%, 15%);
+  --grey: hsl(0, 0%, 33%);
+  --light: hsl(0, 0%, 90%);
+  --lighter: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--dark);
+  color: var(--lighter);
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin: 0;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  background: var(--white) url(../assets/images/background-pattern.svg);
+  color: var(--dark);
+}
+
+.p-coming-soon {
+  margin-bottom: 0.5em;
+  font-family: "Playfair Display SC", serif;
+  font-size: clamp(0.8rem, 1.125vw, 0.9rem);
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.p-coming-soon,
+.subtitle {
+  font-weight: 400;
+}
+
+.title {
+  margin: 0.05em 0;
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: clamp(1.125rem, 1.8vw, 1.3rem);
+  color: var(--grey);
+}
+
+.social-links-navigation {
+  margin-top: 2.5rem;
+}
+
+.social-links {
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-link {
+  margin-bottom: 0.5rem;
+}
+
+.social-item {
+  display: inline-block;
+  font-size: clamp(0.95rem, 1.125vw, 1.125rem);
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.social-item:active {
+  background-color: var(--light);
+}
+
+.social-icon {
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(0.2rem);
+}
+
+.social-name {
+  margin-left: 0.5rem;
+}
+
+@media (hover: hover) {
+  .social-item:hover {
+    text-decoration: underline;
+  }
+}
